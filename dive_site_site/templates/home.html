@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for dive in object_list %}
+    <div class="dive-entry">
+        <h3><a href="{% url 'dive_site_details' dive.pk %}">{{ dive.title }}</a></h3>
+        <p> {{ dive.body }}</p>
+    </div>
+    {% endfor %}
+
+{% endblock content %}
